@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DadospessoaisController;
 use App\Http\Controllers\DadosviaturaController;
 use App\Http\Controllers\FormulariosController;
+use App\Http\Controllers\GraficosController;
 use App\Http\Controllers\LivreteController;
 use App\Http\Controllers\PasseController;
 use App\Http\Controllers\Site\TaxistaController;
@@ -122,3 +123,5 @@ Route::middleware('auth:sanctum')->group(function () {
   Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
 
+///////
+Route::get('/graficos',[GraficosController::class, 'index'])->name('graficos');

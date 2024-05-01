@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Api\BiometricController;
+use App\Http\Controllers\FingerprintController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('biometrics', BiometricController::class);
+  
+ 
+Route::get('/store-fingerprint/{codigo}', [FingerprintController::class, 'store']);
