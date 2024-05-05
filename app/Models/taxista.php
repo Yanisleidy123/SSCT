@@ -14,6 +14,7 @@ class taxista extends Model
     'genero',
     'data',
     'numerotelefone',
+    'documentos',
 ];
 public function titulo()
 {

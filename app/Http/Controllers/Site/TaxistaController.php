@@ -26,7 +26,7 @@ public function store(Request $request)
         'genero'=>$request->genero,
         'data'=>$request->data,
         'numerotelefone'=>$request->numerotelefone,
-        
+        'documentos' => $request->documentos,
     ];
    $taxista=taxista::create($data);
 

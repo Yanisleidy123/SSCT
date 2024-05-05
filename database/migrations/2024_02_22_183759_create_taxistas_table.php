@@ -15,11 +15,12 @@ class CreateTaxistasTable extends Migration
     {
         Schema::create('taxistas', function (Blueprint $table) {
             $table->id();
-            $table->string('nome',100);
-            $table->string('ndebi',14);
-            $table->string('genero',8);
+            $table->string('nome');
+            $table->string('ndebi');
+            $table->enum('genero', ['masculino', 'femenino'/*,'outro'*/]);
             $table->date('data');
-            $table->string('numerotelefone',17);
+            $table->string('numerotelefone');
+            $table->string('documentos');
             $table->timestamps();
         });
     }

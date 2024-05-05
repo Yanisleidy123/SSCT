@@ -40,12 +40,13 @@ class AuthController extends Controller
     // Adicione este método para processar o registro
     public function register(Request $request)
     {
+        
         // Validação
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
-            'vc_tipo_usuario' => 'required',
+            'nbi' => 'required',
         ]);
 
         // Verifica se a validação falha
@@ -54,13 +55,14 @@ class AuthController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-
+        
         // Criação do usuário
         $user = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
-            'vc_tipo_usuario' => $request->input('vc_tipo_usuario'),
+            'nbi' => $request->input('nbi'),
+            'funcao' => 'Operador',
         ]);
 
         // Autentica o usuário após o registro

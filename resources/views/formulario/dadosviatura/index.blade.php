@@ -44,14 +44,15 @@
                                <input type="date" name="data" id="data" class="form-control"><br>   
                                 </div>
                             </div><br>
-    
-                           
-
                         <div class="form-group">
                             <label for="numerotelefone" class="form-label required">Número de Telefone</label>
                             <input type="text" name="numerotelefone" id="numerotelefone" />
                         </div>
 
+                        <div class="form-group">
+                            <label for="documentos">Documentos da Viatura</label>
+                            <input type="file" name="documentos" id="documentos">
+                        </div>
                         
                     </fieldset>
 
@@ -154,8 +155,6 @@
                         </legend>
                         <div class="form-group">
                         
-                            
-
                         <div class="form-group">
                             <label for="dataemissao" class="form-label required">Data de Emissão</label>
                             <input type="date" name="dataemissao" id="dataemissao" />
@@ -166,7 +165,7 @@
                             <input type="text" name="ndetitulo" id="ndetitulo" />
                         </div>
                             <div>
-                                <button class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                                <button class="btn btn-lg btn-primary">
                                   Cadastrar
                                 </button>
                               </div>
